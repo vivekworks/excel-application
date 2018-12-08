@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="ExcelPagePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ExcelView" RangeSize="-1" DataControl="ExcelAppModuleDataControl" id="ExcelViewIterator"/>
+    <searchRegion Binds="ExcelViewIterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="ExcelViewQuery"/>
+  </executables>
+  <bindings>
+    <action IterBinding="ExcelViewIterator" id="CreateInsert" InstanceName="ExcelAppModuleDataControl.ExcelView"
+            DataControl="ExcelAppModuleDataControl" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <tree IterBinding="ExcelViewIterator" id="ExcelView1">
+      <nodeDefinition DefName="model.view.ExcelView" Name="ExcelView10">
+        <AttrNames>
+          <Item Value="Col1"/>
+          <Item Value="Col2"/>
+          <Item Value="Col3"/>
+          <Item Value="Col4"/>
+          <Item Value="Col5"/>
+          <Item Value="Col6"/>
+          <Item Value="Col7"/>
+          <Item Value="Col8"/>
+          <Item Value="Col9"/>
+          <Item Value="Col10"/>
+          <Item Value="Col11"/>
+          <Item Value="Col12"/>
+          <Item Value="Col13"/>
+          <Item Value="Col14"/>
+          <Item Value="Col15"/>
+          <Item Value="Col16"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
